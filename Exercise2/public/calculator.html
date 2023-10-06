@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+  </head>
+  <body>
+    <h2>Num1 is 100 and Num2 is 20</h2>
+    <div>Result for Addition <span id="addition"></span></div>
+    <div>Result for Subtraction <span id="subtraction"></span></div>
+    <div>Result for Multiplication <span id="multiplication"></span></div>
+    <div>Result for Division <span id="division"></span></div>
+  </body>
+  <script>
+    let num1 = 100;
+    let num2 = 20;
+    fetch(`http://127.0.0.1:3000/calculator/add?num1=${num1}&num2=${num2}`)
+      .then((response) => response.json())
+      .then((data) => {
+        document.getElementById("addition").innerHTML = data.result;
+      });
+
+    fetch(`http://127.0.0.1:3000/calculator/subtract?num1=${num1}&num2=${num2}`)
+      .then((response) => response.json())
+      .then((data) => {
+        document.getElementById("subtraction").innerHTML = data.result;
+      });
+
+    fetch(`http://127.0.0.1:3000/calculator/multiply?num1=${num1}&num2=${num2}`)
+      .then((response) => response.json())
+      .then((data) => {
+        document.getElementById("multiplication").innerHTML = data.result;
+      });
+
+    fetch(`http://127.0.0.1:3000/calculator/divide?num1=${num1}&num2=${num2}`)
+      .then((response) => response.json())
+      .then((data) => {
+        document.getElementById("division").innerHTML = data.result;
+      });
+  </script>
+</html>
