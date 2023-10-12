@@ -4,4 +4,4 @@ Part 1: Create a complete swagger specification for the Calculator project detai
 
 Part 2: Add an express back-end to the Fake Store API exercise from Module 4. Your back end should use routes and controller functions to handle fetching the Fake Store data, and your front end should fetch from your back-end instead of directly from the Fake Store back end. Include these routes in your swagger.json config.
 
---> Part2 to be added as a branch [expressBackEnd](https://github.com/popo26/IOD-Module4-MiniProject-ECommerce/tree/expressBackEnd)
+-->Separate folder.[ECommerce-Express](https://github.com/popo26/ECommerce-Express)
