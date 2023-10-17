@@ -33,9 +33,12 @@ router.get("/divide", (req, res) => {
     let number1 = parseInt(req.query.num1);
     let number2 = parseInt(req.query.num2);
     let result = number1 / number2;
-    console.log(result)
+    if (number2 == 0) {
+      result = number1;
+    }
+    console.log(result);
     res.status(200);
-    res.json({result:result})
+    res.json({ result: result });
 })
 
 module.exports = router;

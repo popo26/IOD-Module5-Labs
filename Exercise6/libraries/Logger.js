@@ -1,9 +1,13 @@
 class Logger {
-    constructor(){}
+  constructor() {}
 
-    log(id, value){
-        console.log(`Calculator: ID${id}: Result ${value}`)
-    }
+  #generateId() {
+    return Math.floor(Math.random() * 10000);
+  }
+
+  log(result) {
+    console.log(`Calculator: ID${this.#generateId()}: Result ${result}`);
+  }
 }
 
 module.exports = Logger;

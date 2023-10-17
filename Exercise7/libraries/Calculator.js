@@ -3,7 +3,7 @@ let logging = new Logger();
 
 class Calculator {
   constructor() {
-    this.id = Math.floor(Math.random() * 10000);
+    // this.id = Math.floor(Math.random() * 10000);
   }
 
   //=====LINE10-13, 16, 23,30,40 were Part2. Commented due to Part3.
@@ -14,31 +14,31 @@ class Calculator {
   add(num1, num2) {
     const value = num1 + num2;
     // this.#log(`Addition: ${value}`);
-    logging.log(this.id, value);
+    logging.log(value);
     return value;
   }
 
   subtract(num1, num2) {
     const value = num1 - num2;
     // this.#log(`Subtraction: ${value}`);
-    logging.log(this.id, value);
+    logging.log(value);
     return value;
   }
 
   multiply(num1, num2) {
     const value = num1 * num2;
     // this.#log(`Multiplication: ${value}`);
-    logging.log(this.id, value);
+    logging.log(value);
     return value;
   }
 
   divide(num1, num2) {
     let value = num1 / num2;
     if (num2 === 0) {
-      return (value = num1);
+      value = num1;
     }
     // this.#log(`Division: ${value}`);
-    logging.log(this.id, value);
+    logging.log(value);
     return value;
   }
 }

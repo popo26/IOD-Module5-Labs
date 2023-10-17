@@ -1,8 +1,8 @@
 const friends = require("../models/friends");
 
 const filteringFriends = (req, res) => {
-    console.log(req.query);
-  let filterGender = req.query.gender;
+  console.log(req.query);
+  const filterGender = req.query.gender;
   const filteredLetter = req.query.letter;
   console.log(`Letter is ${filteredLetter}`);
 
@@ -30,9 +30,9 @@ const filteringFriends = (req, res) => {
         "No friends matching gender " +
         filterGender +
         " or starting with letter " +
-        letter,
+        filteredLetter,
     });
   }
 };
 
-module.exports = {filteringFriends};
+module.exports = { filteringFriends };
